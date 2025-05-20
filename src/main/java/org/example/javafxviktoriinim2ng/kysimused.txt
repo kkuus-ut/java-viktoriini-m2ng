@@ -1,0 +1,10 @@
+Eesti, Tallinn
+Soome, Helsingi
+Venemaa, Moskva
+Saksamaa, Berliin
+Jaapan, Tokyo
+Prantsusmaa, Pariis
+USA, Washington
+Hiina, Peking
+Brasiilia, Brasilia
+India, New Delhi
