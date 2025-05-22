@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                org.example.javafxviktoriinim2ng/org.example.javafxviktoriinim2ng.HelloApplication
+                                org.example.javafxviktoriinim2ng/org.example.javafxviktoriinim2ng.ViktoriiniProgramm
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
