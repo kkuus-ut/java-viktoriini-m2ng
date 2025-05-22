@@ -125,10 +125,9 @@ Niger, Niamey
 Nigeeria, Abuja
 Norra, Oslo
 Omaan, Muscat
-Paakistan, Islamabad
+Pakistan, Islamabad
 Paapua Uus-Guinea, Port Moresby
 Panama, Panama City
-Püha Tool, Vatikan
 Paraguay, Asuncion
 Peruu, Lima
 Filipiinid, Manila
@@ -143,7 +142,7 @@ Saint Lucia, Castries
 Saint Vincent ja Grenadiinid, Kingstown
 Samoa, Apia
 San Marino, San Marino
-São Tomé ja Príncipe, Sao Tome
+Sao Tome ja Principe, Sao Tome
 Saudi Araabia, Riyadh
 Senegal, Dakar
 Serbia, Belgrad

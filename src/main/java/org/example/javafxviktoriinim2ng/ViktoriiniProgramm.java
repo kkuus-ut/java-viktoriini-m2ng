@@ -1,9 +1,11 @@
 package org.example.javafxviktoriinim2ng;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -34,6 +36,12 @@ public class ViktoriiniProgramm extends Application {
     private TextField tekstiKast;
     private Label vastus;
 
+    //KUTSUME, KUI VOOR OTSAS
+    private Button jatkaNupp;
+    private Button lopetaNupp;
+    private HBox nupuriba;
+
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -61,7 +69,14 @@ public class ViktoriiniProgramm extends Application {
 
         vastus = new Label();
 
-        VBox paigutus = new VBox(10, kysimuseSilt, tekstiKast, vastuseNupp, vastus);
+        jatkaNupp = new Button("Jätka");
+        lopetaNupp = new Button("Lõpeta");
+
+        nupuriba = new HBox(10, jatkaNupp, lopetaNupp);
+        nupuriba.setPadding(new Insets(10));
+        nupuriba.setVisible(false);
+
+        VBox paigutus = new VBox(10, kysimuseSilt, tekstiKast, vastuseNupp, vastus, nupuriba);
         paigutus.setPadding(new Insets(20));
 
         Scene stseen = new Scene(paigutus, 400, 200);
@@ -70,13 +85,43 @@ public class ViktoriiniProgramm extends Application {
         peaStage.setTitle("Pealinnade Viktoriin");
         peaStage.show();
 
+        jatkaNupp.setOnAction(e -> {
+            nupuriba.setVisible(false);
+            punktid = 0;
+            kysimuseLoendur = 0;
+            vooruLogi.clear();
+            tekstiKast.setDisable(false);
+            jargmineKysimus();
+        });
+
+        lopetaNupp.setOnAction(e -> {
+            salvestaLogiFaili(2);
+            Platform.exit();
+        });
+
         jargmineKysimus();
         //KÜSIME KÜSIMUSE
     }
 
     private void jargmineKysimus() {
-        //KUI VOOR POLE LÄBI, KÜSIME
-        if (kysimusteIx < kysimused.size() && kysimuseLoendur < vooruMaks) {
+        //KÜSIMUSED ON OTSAS
+        if (kysimusteIx >= maksKysimust) {
+            tekstiKast.setText("Küsimused on otsas!");
+            vastus.setText("Kokku küsitud: " + kysimusteIx + " / " + maksKysimust);
+            tekstiKast.setDisable(true);
+
+            //TEEME NUPURIBA TÜHJAKS, JÄÄB AINULT LÕPETA NUPP
+            nupuriba.getChildren().clear();
+            nupuriba.getChildren().add(lopetaNupp);
+            nupuriba.setVisible(true);
+
+
+            salvestaLogiFaili(2);
+            return;
+        }
+
+        //KUI VOOR POLE LÄBI JA KÜSIMUSI, JÄTKUB, KÜSIME
+        if (kysimuseLoendur < vooruMaks) {
             praeguneKysimus = kysimused.get(kysimusteIx++);
             kysimuseSilt.setText("Mis on riigi " + praeguneKysimus.getRiik() + " pealinn?");
             tekstiKast.clear();
@@ -92,31 +137,9 @@ public class ViktoriiniProgramm extends Application {
             vooruLogi.add("Skoor selles voorus: " + punktid + " / " + kysimuseLoendur);
             vooruLogi.add("------------------------------------");
 
+            nupuriba.setVisible(true);
             salvestaLogiFaili(1);
 
-            // KÜSIME KAS KASUTAJA TAHAB VEEL MÄNGIDA
-            ButtonType jah = new ButtonType("Jah", ButtonBar.ButtonData.YES);
-            ButtonType ei = new ButtonType("Ei", ButtonBar.ButtonData.NO);
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Kas soovid järgmist vooru alustada?", jah, ei);
-            alert.setTitle("Voor lõppenud");
-            alert.setHeaderText(null);
-            alert.showAndWait().ifPresent(response -> {
-                if (response == jah && kysimusteIx < maksKysimust) {
-                    // ALUSTAME UUE VOORU
-                    punktid = 0;
-                    kysimuseLoendur = 0;
-                    vooruLogi.clear();
-                    tekstiKast.setDisable(false);
-                    jargmineKysimus();
-                } else {
-                    tekstiKast.setText("Viktoriin lõppenud!");
-                    vastus.setText("Kokku küsitud: " + kysimusteIx + " / " + maksKysimust);
-
-                    salvestaLogiFaili(2);
-
-                    tekstiKast.setDisable(true);
-                }
-            });
         }
     }
 
@@ -153,7 +176,7 @@ public class ViktoriiniProgramm extends Application {
                 String rida = skannija.nextLine();
                 String[] osad = rida.split(",");
 
-                Kysimus uusRiik = new Kysimus(osad[0].strip(), osad[1].strip());;
+                Kysimus uusRiik = new Kysimus(osad[0].strip(), osad[1].strip());
                 kysimused.add(uusRiik);
 
             }
