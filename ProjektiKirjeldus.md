@@ -8,15 +8,14 @@ Kristjan Kuus, Roman Kurm
 
 Projekti eesmärgiks oli valmistada puhta koodiga Viktoriini Mäng, millel on kaks mängumoodi. Saavutatasime eesmärgi.
 Programmi enda eesmärk on testida mängija geograafiilisi teadmisi ning mängumoodide abil kasutajale rohkem meelelahutust pakkuda.
-Mängija sisestab mängumoodi raskuse (TAVALINE või RASKE), seejärel hakkab programm mängijalt küsima erinevate suvaliselt valitud riikide pealinnu.
+Mängija käivitab programmi ning  valib seejärel rippmenüüst soovitud raskusastme (TAVALINE või RASKE). Pärast seda hakkab programm esitama suvaliselt valitud riikide pealinnade küsimusi.
 
 ---
 
 ### Klasside kirjeldused
 
-ViktoriiniProgramm: loeb tekstifailist riigid ja pealinnad ning lisab ned "Kysimus" objektidena objekti "Viktoriin" isendivälja "kysimused" listi. Samuti vastutab see klass mängumoodi küsimise ning Viktoriini objekti tegemise eest.
+ViktoriiniProgramm: loeb tekstifailist riigid ja pealinnad, loob neist "Kysimus" objektid ning lisab need listi. Tegemist on peaklassiga, mis tegeleb nii mängu loogika kui ka graafilise kasutajaliidesega.
 Kysimus: Lihtne klass, mis sisaldab isendi välju "riik" ja "pealinn". Igal küsimusel on oma "Kysimus" klass.
-Viktoriin: Tegeleb mängu läbiviimisega. Vastutab suvaliste küsimuste valimise eest ning programmi töö lõpetamise eest vastavalt mängumoodile.
 Mängumood: Enum klass, mis sisaldab mängumoodide raskusastmeid: TAVALINE ja RASKE. RASKE mängumoodi puhul lõppeb mäng automaatselt, kui kasutaja vastab ühele küsimusele valesti.
 
 ---
@@ -24,7 +23,10 @@ Mängumood: Enum klass, mis sisaldab mängumoodide raskusastmeid: TAVALINE ja RA
 ### Projekti tegemise protsess 
 
 Roman seadistas üles Viktoriin ning Mängumood klassid. Tema ülesandeks oli programmeerida mängu läbiviimine. Kristjan kirjutas koodi, mis loeb failist küsimused ning viib need objektide kujule. Samuti oli tema ülesandeks veenduda, et kasutaja sisend ei põhjustaks programmis tõrkeid.
+
+Teises etapis tegeles Kristjan mängu loogika ning logimisega, Roman aga kasutajaliidesega.
 Mõlemad rühmaliikmed nägid vaeva ning on üksteise tööga vägagi rahul.
+
 
 ---
 
@@ -32,9 +34,13 @@ Mõlemad rühmaliikmed nägid vaeva ning on üksteise tööga vägagi rahul.
 
 Roman panustas klassi Viktoriin ning Mängumood loomisele, Kristjan panustas failist lugemisele ning kasutaja sisendi kontrollimisele. Romanil kulus natukene üle 1h, Kristjanil sama.
 
+Teises etapis panustas Roman ViktoriiniProgramm kasutajaliidese loomisega, Kristjan mänguloogika ja logimisega.
+
 ### Tegemise mured 
 
-Muresid ei tekkinud, teadmised olid mõlemal olemas ning võibolla kui mõni üksik API osa oli meelest läinud, saime alati seda googeldada.
+Esimeses etappis muresid ei tekkinud, teadmised olid mõlemal olemas ning võibolla kui mõni üksik API osa oli meelest läinud, saime alati seda googeldada.
+
+Teises etapis tekkis mure, sest ei teadnud kõiki JavaFX spetsifiilisi meetodeid. Leitsime lahendused oma probleemidele JavaFX API'st.
 
 ---
 
