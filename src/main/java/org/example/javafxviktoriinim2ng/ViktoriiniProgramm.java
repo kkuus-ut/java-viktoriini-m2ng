@@ -41,6 +41,9 @@ public class ViktoriiniProgramm extends Application {
     private Button lopetaNupp;
     private HBox nupuriba;
 
+    //Mängumood
+    private Mängumood mängumood;
+
 
     public static void main(String[] args) {
         launch(args);
@@ -53,6 +56,30 @@ public class ViktoriiniProgramm extends Application {
 
         if (kysimused.isEmpty()) {
             // EI LEITUD KYSIMUSI, PROGRAMM LOPETAB TOO
+            return;
+        }
+
+        //KÜSIME RASKUSE
+        String[] raskuseValikud = {"Tavaline", "Raske"};
+        ChoiceDialog<String> raskuseValik = new ChoiceDialog<>("Tavaline", raskuseValikud);
+        raskuseValik.setTitle("Raskuse valik");
+        raskuseValik.setHeaderText("Vali raskusaste");
+        raskuseValik.setContentText("Vali mängumood:\n\n" +
+                "Tavaline – mäng ei lõpe enne, kui kasutaja selle sulgeb. Mäng on jagatud voorudeks, milles on viis küsimust.\n" +
+                "Raske – mäng lõpeb kohe esimese vale vastuse korral. Mäng ei ole jagatud voorudeks.\n" +
+                "PS! Kõik pealinnad on ladina tähestikus ja ei sisalda võõrtähti. Nt: Brasília asemel kirjuta Brasilia.");
+
+        Optional<String> valitudRaskus = raskuseValik.showAndWait();
+
+        if (valitudRaskus.isPresent()) {
+            if (valitudRaskus.get().equals("Raske")) {
+                mängumood = Mängumood.RASKE;
+            } else {
+                mängumood = Mängumood.TAVALINE;
+            }
+        } else {
+            // KUI KASUTAJA SULGEB DIALOOGI AKNA JA EI VALI RASKUST, LÕPETAME.
+            Platform.exit();
             return;
         }
 
@@ -72,6 +99,7 @@ public class ViktoriiniProgramm extends Application {
         jatkaNupp = new Button("Jätka");
         lopetaNupp = new Button("Lõpeta");
 
+        //NUPURIBA, KUS PÄRAST VOORU KASUTAJA SAAB JÄTKADA VÕI PROGRAMMI KINNI PANNA
         nupuriba = new HBox(10, jatkaNupp, lopetaNupp);
         nupuriba.setPadding(new Insets(10));
         nupuriba.setVisible(false);
@@ -156,6 +184,22 @@ public class ViktoriiniProgramm extends Application {
         } else {
             this.vastus.setText("Vale! Õige vastus: " + praeguneKysimus.getPealinn());
             logiRida = "Küsimus: " + praeguneKysimus.getRiik() + ", " + praeguneKysimus.getPealinn() + ". Kasutaja vastus: " + vastus + ", vale!";
+
+            if (mängumood == Mängumood.RASKE) {
+                // PANEME PROGRAMMI KINNI
+                vooruLogi.add(logiRida);
+                kokkuKysitud++;
+                salvestaLogiFaili(2);
+                tekstiKast.setText("Vale vastus! Mäng lõpeb!");
+                this.vastus.setText("Kokku küsitud: " + kysimusteIx + " / " + maksKysimust);
+
+                //TEEME NUPURIBA TÜHJAKS, JÄÄB AINULT LÕPETA NUPP
+                tekstiKast.setDisable(true);
+                nupuriba.getChildren().clear();
+                nupuriba.getChildren().add(lopetaNupp);
+                nupuriba.setVisible(true);
+                return;
+            }
         }
 
         vooruLogi.add(logiRida);
