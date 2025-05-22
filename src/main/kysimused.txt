@@ -1,0 +1,190 @@
+Afganistan, Kabul
+Albaania, Tirana
+Alžeeria, Alziir
+Andorra, Andorra la Vella
+Angola, Luanda
+Antigua ja Barbuda, Saint John's
+Argentina, Buenos Aires
+Armeenia, Jerevan
+Austraalia, Canberra
+Austria, Viin
+Aserbaidžaan, Bakuu
+Bahama, Nassau
+Bahrein, Manama
+Bangladesh, Dhaka
+Barbados, Bridgetown
+Valgevene, Minsk
+Belgia, Brüssel
+Belize, Belmopan
+Benin, Porto-Novo
+Bhutan, Thimphu
+Bolivia, Sucre
+Bosnia ja Hertsegoviina, Sarajevo
+Botswana, Gaborone
+Brasiilia, Brasiilia
+Brunei, Bandar Seri Begawan
+Bulgaaria, Sofia
+Burkina Faso, Ouagadougou
+Burundi, Bujumbura
+Cabo Verde, Praia
+Kambodža, Phnom Penh
+Kamerun, Yaounde
+Kanada, Ottawa
+Kesk-Aafrika Vabariik, Bangui
+Tšaad, N'Djamena
+Tšiili, Santiago
+Hiina, Peking
+Kolumbia, Bogota
+Komoorid, Moroni
+Kongo Vabariik, Brazzaville
+Kongo Demokraatlik Vabariik, Kinshasa
+Costa Rica, San Jose
+Horvaatia, Zagreb
+Kuuba, Havana
+Küpros, Nikosia
+Tšehhi Vabariik, Praha
+Taani, Kopenhaagen
+Djibouti, Djibouti
+Dominica, Roseau
+Dominikaani Vabariik, Santo Domingo
+Ecuador, Quito
+Egiptus, Kairo
+El Salvador, San Salvador
+Ekvatoriaal-Guinea, Malabo
+Eritrea, Asmara
+Eesti, Tallinn
+Etioopia, Addis Abeba
+Fidži, Suva
+Soome, Helsingi
+Prantsusmaa, Pariis
+Gabon, Libreville
+Gambia, Banjul
+Gruusia, Tbilisi
+Saksamaa, Berliin
+Ghana, Accra
+Kreeka, Ateena
+Grenada, St. George's
+Guatemala, Guatemala City
+Guinea, Conakry
+Guinea-Bissau, Bissau
+Guyana, Georgetown
+Haiti, Port-au-Prince
+Honduras, Tegucigalpa
+Ungari, Budapest
+Island, Reykjavík
+India, New Delhi
+Indoneesia, Jakarta
+Iraan, Teheran
+Iraak, Bagdad
+Iirimaa, Dublin
+Iisrael, Jerusalem
+Itaalia, Rooma
+Jamaika, Kingston
+Jaapan, Tokyo
+Jordaania, Amman
+Kasahstan, Astana
+Keenia, Nairobi
+Kiribati, Tarawa
+Kuveit, Kuveit City
+Kõrgõzstan, Biskek
+Laos, Viientiane
+Läti, Riia
+Liibanon, Beirut
+Lesotho, Maseru
+Libeeria, Monrovia
+Liibüa, Tripoli
+Liechtenstein, Vaduz
+Leedu, Vilnius
+Luksemburg, Luksemburg
+Põhja-Makedoonia, Skopje
+Madagaskar, Antananarivo
+Malawi, Lilongwe
+Malaisia, Kuala Lumpur
+Maldiivid, Male
+Mali, Bamako
+Malta, Valletta
+Maroko, Rabat
+Marshalli Saared, Majuro
+Mauritaania, Nouakchott
+Mauritiuse saar, Port Louis
+Mehhiko, Mexico City
+Mikroneesia, Palikir
+Moldova, Chisinau
+Monaco, Monaco
+Mongoolia, Ulan Bator
+Montenegro, Podgorica
+Mosambiik, Maputo
+Myanmar, Naypyidaw
+Namiibia, Windhoek
+Nauru, Yaren
+Nepal, Kathmandu
+Madalmaad, Amsterdam
+Uus-Meremaa, Wellington
+Nicaragua, Managua
+Niger, Niamey
+Nigeeria, Abuja
+Norra, Oslo
+Omaan, Muscat
+Paakistan, Islamabad
+Paapua Uus-Guinea, Port Moresby
+Panama, Panama City
+Püha Tool, Vatikan
+Paraguay, Asuncion
+Peruu, Lima
+Filipiinid, Manila
+Poola, Varssavi
+Portugal, Lissabon
+Katar, Doha
+Rumeenia, Bukarest
+Venemaa, Moskva
+Rwanda, Kigali
+Saint Kitts ja Nevis, Basseterre
+Saint Lucia, Castries
+Saint Vincent ja Grenadiinid, Kingstown
+Samoa, Apia
+San Marino, San Marino
+São Tomé ja Príncipe, Sao Tome
+Saudi Araabia, Riyadh
+Senegal, Dakar
+Serbia, Belgrad
+Seišellid, Victoria
+Sierra Leone, Freetown
+Singapur, Singapur
+Slovakkia, Bratislava
+Sloveenia, Ljubljana
+Salamonisaared, Honiara
+Somalia, Mogadishu
+Lõuna-Aafrika Vabariik, Pretoria
+Lõuna-Korea, Seoul
+Lõuna-Sudaan, Juba
+Sudaan, Khartum
+Hispaania, Madrid
+Sri Lanka, Colombo
+Suriname, Paramaribo
+Rootsi, Stockholm
+Šveits, Bern
+Süüria, Damaskus
+Tai, Bangkok
+Tadžikistan, Dusanbe
+Tansaania, Dodoma
+Togo, Lomé
+Tonga, Nukuʻalofa
+Trinidad ja Tobago, Port of Spain
+Tuneesia, Tunis
+Türgi, Ankara
+Türkmenistan, Aşgabat
+Tuvalu, Funafuti
+Uganda, Kampala
+Ukraina, Kiiev
+Araabia Ühendemiraadid, Abu Dhabi
+Ühendkuningriigid, London
+USA, Washington
+Uruguay, Montevideo
+Usbekistan, Taskent
+Vanuatu, Port Vila
+Vatikan, Vatikan
+Venezuela, Caracas
+Vietnam, Hanoi
+Jeemen, Sana'a
+Sambia, Lusaka
+Zimbabwe, Harare
